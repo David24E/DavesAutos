@@ -1,0 +1,13 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model DavesAutos.Models.IndividualButtonPartial
+
+<a type="button" class="btn btn-sm @Model.ButtonType"
+   href="@Url.Action(Model.Action)@Model.ActionParameters">
+    <span class="fa fa-@Model.Glyph aria-hidden="true"">
+    </span>
+    <span class="sr-only">@Model.Text</span>
+</a>

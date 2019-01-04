@@ -1,0 +1,44 @@
+﻿@model DavesAutos.Models.IndividualButtonPartial
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<td style="width:150px;">
+    <div class="btn-group" role="group">
+        <partial name="_IndividualButtonPartial" ,
+                 model='new IndividualButtonPartial
+            {
+                Action="Edit",
+                ButtonType="btn-primary",
+                Glyph="edit",
+                Text = "Edit Button",
+                ServiceId=Model.ServiceId,
+                CustomerId=Model.CustomerId,
+                CarId=Model.CarId
+            }' />
+
+        <partial name="_IndividualButtonPartial" ,
+                 model='new IndividualButtonPartial
+            {
+                Action = "Details",
+                ButtonType = "btn-success",
+                Glyph = "list",
+                Text = "Details Button",
+                ServiceId = Model.ServiceId,
+                CustomerId = Model.CustomerId,
+                CarId = Model.CarId
+            }' />
+
+        <partial name="_IndividualButtonPartial" ,
+                 model='new IndividualButtonPartial
+            {
+                Action = "Delete",
+                ButtonType = "btn-danger",
+                Glyph = "trash",
+                Text = "Delete Button",
+                ServiceId = Model.ServiceId,
+                CustomerId = Model.CustomerId,
+                CarId = Model.CarId
+            }' />
+    </div>
+</td>
